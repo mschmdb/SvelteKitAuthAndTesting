@@ -25,7 +25,14 @@
 		}
 	];
 </script>
-
+<!-- Page Heading -->
+<header class="max-w-3xl">
+    <p class="mb-2 text-sm font-semibold text-blue-600">SvelteKit</p>
+    <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">
+        Testing and Authentication
+    </h1>
+</header>
+<!-- End Page Heading -->
 <div class="mt-4 max-w-3xl space-y-6">
     <div class="grid grid-cols-2 gap-60">
         <Card.Root class="w-[350px]">
