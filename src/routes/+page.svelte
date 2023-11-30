@@ -31,7 +31,7 @@
         <Card.Root class="w-[350px]">
             <Card.Header>
                 <Card.Title>fast</Card.Title>
-                <Card.Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Card.Description>
+                <Card.Description>LLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Card.Description>
             </Card.Header>
             <Card.Content>
                 Powered by Svelte and Vite, speed is baked into every crevice: fast setup, fast dev, fast builds, fast page loads, fast navigation. Did we mention it's fast?
