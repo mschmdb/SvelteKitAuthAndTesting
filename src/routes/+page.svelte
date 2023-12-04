@@ -6,6 +6,12 @@
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
 
+
+    import { page } from '$app/stores';
+   $: console.log($page)
+//    $: console.log(data.loggedIn)
+
+
 	const frameworks = [
 		{
 			value: 'sveltekit',
