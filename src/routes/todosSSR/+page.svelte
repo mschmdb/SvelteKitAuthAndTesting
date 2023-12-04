@@ -1,8 +1,9 @@
 <script lang="ts">
 	import TodoHeader from '$lib/TodoHeader.svelte';
 	import type { PageData } from './$types';
-	
+
 	export let data: PageData;
+  console.log(data)
 </script>
 
 <TodoHeader />
