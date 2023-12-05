@@ -29,8 +29,7 @@ export const actions: Actions = {
                 userId: user.userId,
 
                 attributes: {
-                    username: user.username,
-                    name: user.name,
+                    
                 }
             });
             locals.auth.setSession(session);

@@ -21,4 +21,4 @@
 
     <button type="submit" class="w-full text-black border-black border-2 font-bold py-2 px-4 rounded">Login</button>
 </form>
-<p class="text-center mt-4">Don't have an account? <a href="/auth/register" class="text-blue-600 hover:text-blue-800">Register</a></p>
+<p class="text-center mt-4">Don't have an account? <a href="/auth/signup" class="text-blue-600 hover:text-blue-800">Register</a></p>
