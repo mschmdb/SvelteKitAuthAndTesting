@@ -1,38 +1,23 @@
-# create-svelte
+# Showcase SvelteKit Workshop Repo
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repository is the home of the "Showcase SvelteKit Workshop", leveraging the latest in SvelteKit, CSR / SSR, authentication with Lucia, PostgreSQL adapter, and comprehensive testing strategies.
 
-## Creating a project
+## Authentication with Lucia and PostgreSQL
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Lucia**: Integrated for streamlined authentication.
+- **PostgreSQL Adapter**: Utilizes `@lucia-auth/adapter-postgresql` for secure database interactions.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Testing
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Unit Testing**: Implemented with `vitest`.
+- **Integration Testing**: Conducted using `@playwright/test`.
+- **Testing Utilities**: Svelte components tested with `@testing-library/svelte`.
 
-## Developing
+## Development and Building
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **Developing**: Run `npm run dev` to start the development server.
+- **Building**: Use `npm run build` to create a production build.
 
-```bash
-npm run dev
+Refer to the provided scripts in `package.json` for a full range of commands available for testing, linting, and development.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> Ensure to install dependencies with `npm install` before starting development. For deploying, an appropriate [adapter](https://kit.svelte.dev/docs/adapters) might be required.

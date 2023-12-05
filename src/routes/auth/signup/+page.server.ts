@@ -2,6 +2,12 @@ import { auth } from '$lib/server/lucia'
 import { fail, redirect } from '@sveltejs/kit'
 import type { Actions, PageServerLoad } from './$types'
 
+/**
+ * Loads the server-side data for the signup page.
+ * 
+ * @param {PageServerLoadParams} params - The parameters for the page server load function.
+ * @returns {Promise<void>} - A promise that resolves when the server-side data is loaded.
+ */
 export const load: PageServerLoad = async ({ locals }) => {
     const session = await locals.auth.validate();
     if (session) {
@@ -9,6 +15,13 @@ export const load: PageServerLoad = async ({ locals }) => {
     }
 }
 
+/**
+ * Handles the default action for the signup page.
+ * 
+ * @param request - The HTTP request object.
+ * @param locals - The SvelteKit locals object.
+ * @returns A promise that resolves to a redirect response or throws an error.
+ */
 export const actions: Actions = {
     default: async ({ request, locals }) => {
         const { name, username, password } = Object.fromEntries(await request.formData()) as Record<string, string>;

@@ -10,6 +10,13 @@ export const load: PageServerLoad = async ({ locals }) => {
 	return {};
 };
 
+/**
+ * Handles the login action.
+ * 
+ * @param request - The incoming request object.
+ * @param locals - The local variables object.
+ * @returns A Promise that resolves to a redirect response or an error response.
+ */
 export const actions: Actions = {
 	default: async ({ request, locals }) => {
 		const formData = await request.formData();
