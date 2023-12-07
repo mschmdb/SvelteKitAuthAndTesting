@@ -8,8 +8,8 @@
 		aria-label="Global"
 	>
 		<div class="flex items-center justify-between">
-			<a class="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand"
-				>SvelteKit Test & Auth Demonstration</a
+			<a class="flex-none text-xl font-semibold dark:text-white" href="/" aria-label="Brand"
+				>SvelteKit Test & Auth</a
 			>
 			<div class="sm:hidden">
 				<button
@@ -59,11 +59,7 @@
 			<div
 				class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7"
 			>
-				<a
-					class="font-medium text-blue-600 sm:py-6 dark:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-					href="#"
-					aria-current="page">Landing</a
-				>
+				
 				{#if $page.data.loggedIn === true}
 					<a
 						class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -73,10 +69,7 @@
 				
 				{/if}
 
-				<a
-					class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-					href="#">Work</a
-				>
+				
 				<a
 					class="font-medium text-gray-500 hover:text-gray-400 sm:py-6 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
 					href="/todosCSR">CSR</a

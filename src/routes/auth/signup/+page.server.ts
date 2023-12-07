@@ -9,6 +9,7 @@ import type { Actions, PageServerLoad } from './$types'
  * @returns {Promise<void>} - A promise that resolves when the server-side data is loaded.
  */
 export const load: PageServerLoad = async ({ locals }) => {
+    // check if user is authenticated
     const session = await locals.auth.validate();
     if (session) {
         throw redirect(302, '/');
@@ -23,9 +24,12 @@ export const load: PageServerLoad = async ({ locals }) => {
  * @returns A promise that resolves to a redirect response or throws an error.
  */
 export const actions: Actions = {
+    
     default: async ({ request, locals }) => {
+        // get form data
         const { name, username, password } = Object.fromEntries(await request.formData()) as Record<string, string>;
         try {
+            // create user
             const user = await auth.createUser({
                 key: {
                     providerId: 'username',
@@ -38,6 +42,7 @@ export const actions: Actions = {
                 }
             });
             console.log("user?", user);
+            // create session
             const session = await auth.createSession({
                 userId: user.userId,
 
@@ -45,6 +50,7 @@ export const actions: Actions = {
                     
                 }
             });
+            // set session cookie
             locals.auth.setSession(session);
         } catch (err) {
             console.error(err);

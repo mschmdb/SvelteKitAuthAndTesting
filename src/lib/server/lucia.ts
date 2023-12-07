@@ -7,6 +7,13 @@ import { PRIVATE_NEON_URL } from "$env/static/private";
 
 const sql = postgres(PRIVATE_NEON_URL);
 
+/**
+ * Initializes the authentication middleware using Lucia.
+ * @param {boolean} dev - Indicates whether the environment is development or production.
+ * @param {Function} sveltekit - The middleware function for SvelteKit.
+ * @param {Object} sql - The SQL configuration object.
+ * @returns {Object} - The authentication object.
+ */
 export const auth = lucia({
     env: dev ? "DEV" : "PROD",
     middleware: sveltekit(),
@@ -15,6 +22,7 @@ export const auth = lucia({
         key: "user_key",
         session: "user_session"
     }),
+    //define the user attributes to be stored in the session
     getUserAttributes: (data) => {
         return {
             userId: data.id,
